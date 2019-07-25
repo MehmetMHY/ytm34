@@ -1,4 +1,6 @@
-Program: YouTube-To-Mp3-B | Date: 7-18-2019 | By: Mehmet Yilmaz + youtube-dl
+# Program: YouTube-To-Mp3-B
+# Date:    7-18-2019
+# By:      Mehmet Yilmaz + youtube-dl
 
 # Description:
 A simple terminal console program that allows you to create,
