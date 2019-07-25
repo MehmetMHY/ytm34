@@ -1,4 +1,4 @@
-# Program: YouTube-To-Mp3-B | Date: 7-18-2019 | By: Mehmet Yilmaz + youtube-dl
+Program: YouTube-To-Mp3-B | Date: 7-18-2019 | By: Mehmet Yilmaz + youtube-dl
 
 # Description:
 A simple terminal console program that allows you to create,
@@ -28,13 +28,15 @@ create an OK-ish UI though the terminal.
 4) Click on ytm.command to run
 
 # How to Use:
-(1) ADD:          Takes you a loop where you can add as many YoTube URLs as you want.
-(2) CONVERT:      Uses youtube-dl on all the links you added in ADD.
-(3) EXIT:         Closes over all program.
-(4) REFRESH:      Cleans programs directory, use it before closing program. Also clears links.txt file.
-(5) VIEW LIST:    Prints out all the URLs you entered.
-(6) README:       Prints out README.
-(7) VIEW EXPORTS: Prints out all the MP3 files in the MP3_Files folder.
+(1) ADD:           Takes you a loop where you can add as many YoTube URLs as you want.
+(2) CONVERT:       Uses youtube-dl on all the links you added in ADD.
+(3) REFRESH:       Cleans programs directory, use it before closing program. Also clears links.txt file.
+(4) EXIT:          Closes over all program.
+(5) VIEW-ADD-LIST: Prints out all the URLs you entered.
+(6) README:        Prints out README.
+(7) VIEW-EXPORTS:  Prints out all the MP3 files in the MP3_Files folder.
+(8) EDIT-ADD-LIST: Edit links.txt file with VIM.
+(9) PRINT-OPTIONS: Set terminal console print out.
 
 # Other Notes:
   -Please only use and move around ONE ytm.command for this program!
@@ -46,7 +48,10 @@ links.txt       = Used to store YouTube URL Links.
 main_run.sh     = Main Bash Script for the code as a whole.
 MP3_Files       = Where the MP3 Files are stored after downloading.
 music_run.py    = Python script used as part of downloading process.
-print.py        = Python script to print non-UI for the code.
+Title-Prints    = Folder that holds print.py, print2.py, and title-state
+   print.py        = Python script to print non-UI for the code.
+   print2.py       = Python script to print non-UI (basic edition) for the code.
+   title-state     = True or False state for the non-UI options.
 README.txt      = README Text File.
 ytm.command	 = Used to execute overall program anywhere.
 
@@ -54,3 +59,4 @@ ytm.command	 = Used to execute overall program anywhere.
 1) https://github.com/ytdl-org/youtube-dl
 2) https://stackoverflow.com/questions/8409946/how-do-i-make-this-file-sh-executable-via-double-click
 3) https://apple.stackexchange.com/questions/20104/how-do-i-execute-command-line-scripts
+4) https://www.youtube.com/
