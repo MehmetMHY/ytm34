@@ -13,10 +13,10 @@ A simple terminal console program that allows you to create, a list of youtube U
 4) All MP3 Files are stored in MP3_Files dir.
 
 # Requirements:
-  -MacOS
-  -Python3
-  -Brew
-  -youtube-dl  :  https://github.com/ytdl-org/youtube-dl
+- MacOS
+- Python3
+- Brew
+- youtube-dl  :  https://github.com/ytdl-org/youtube-dl
 
 # How to Install:
 1) Read the README
@@ -38,7 +38,7 @@ A simple terminal console program that allows you to create, a list of youtube U
 # Other Notes:
 - Please only use and move around ONE ytm.command for this program!
 
-# What Each Part Does: (as of 7-19-2019)
+# What Each Part Does:
 - YTMB-OTHER      = Folder of old stuff I made and just kept. Not part of code!
 - install-ytm.sh  = Used to install over all code.
 - links.txt       = Used to store YouTube URL Links.
