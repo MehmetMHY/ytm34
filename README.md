@@ -1,5 +1,6 @@
 # YouTube-To-Mp3-B
-By: Mehmet Yilmaz + youtube-dl
+- Supported-By: youtube-dl
+- By: Mehmet Yilmaz
 
 # Description:
 A simple terminal console program that allows you to create,
@@ -29,15 +30,15 @@ create an OK-ish UI though the terminal.
 4) Click on ytm.command to run
 
 # How to Use:
-(1) ADD:           Takes you a loop where you can add as many YoTube URLs as you want.
-(2) CONVERT:       Uses youtube-dl on all the links you added in ADD.
-(3) REFRESH:       Cleans programs directory, use it before closing program. Also clears links.txt file.
-(4) EXIT:          Closes over all program.
-(5) VIEW-ADD-LIST: Prints out all the URLs you entered.
-(6) README:        Prints out README.
-(7) VIEW-EXPORTS:  Prints out all the MP3 files in the MP3_Files folder.
-(8) EDIT-ADD-LIST: Edit links.txt file with VIM.
-(9) PRINT-OPTIONS: Set terminal console print out.
+- (1) ADD:           Takes you a loop where you can add as many YoTube URLs as you want.
+- (2) CONVERT:       Uses youtube-dl on all the links you added in ADD.
+- (3) REFRESH:       Cleans programs directory, use it before closing program. Also clears links.txt file.
+- (4) EXIT:          Closes over all program.
+- (5) VIEW-ADD-LIST: Prints out all the URLs you entered.
+- (6) README:        Prints out README.
+- (7) VIEW-EXPORTS:  Prints out all the MP3 files in the MP3_Files folder.
+- (8) EDIT-ADD-LIST: Edit links.txt file with VIM.
+- (9) PRINT-OPTIONS: Set terminal console print out.
 
 # Other Notes:
   -Please only use and move around ONE ytm.command for this program!
