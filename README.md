@@ -3,12 +3,7 @@
 - By: Mehmet Yilmaz
 
 # Description:
-A simple terminal console program that allows you to create,
-a list of youtube URL links. Then, convert those URL links
-to mp3 files. As this is a YouTube to mp3 converting program.
-This is all possible thanks to youtube-dl, I simply gave it
-the option of adding lists of URL links well at the same time
-create an OK-ish UI though the terminal.
+A simple terminal console program that allows you to create, a list of youtube URL links. Then, convert those URL links to mp3 files. As this is a YouTube to mp3 converting program. This is all possible thanks to youtube-dl, I simply gave it the option of adding lists of URL links well at the same time create an OK-ish UI though the terminal.
 
 # Important:
 1) This code only really works on MacOS.
@@ -41,7 +36,7 @@ create an OK-ish UI though the terminal.
 - (9) PRINT-OPTIONS: Set terminal console print out.
 
 # Other Notes:
-  -Please only use and move around ONE ytm.command for this program!
+- Please only use and move around ONE ytm.command for this program!
 
 # What Each Part Does: (as of 7-19-2019)
 - YTMB-OTHER      = Folder of old stuff I made and just kept. Not part of code!
