@@ -8,8 +8,7 @@ A simple terminal console program that allows you to create, a list of youtube U
 # Important:
 1) This code only really works on MacOS.
 2) This code is a Terminal Console program.
-3) This code can work with Ubuntu/Linux, but some
-   changes need to be made.
+3) This code can work with Ubuntu/Linux, but some changes need to be made.
 4) All MP3 Files are stored in MP3_Files dir.
 
 # Requirements:
@@ -19,10 +18,10 @@ A simple terminal console program that allows you to create, a list of youtube U
 - youtube-dl  :  https://github.com/ytdl-org/youtube-dl
 
 # How to Install:
-1) Read the README
-2) Run the install-yam.sh bash script in the terminal
-3) Follow the steps stated after executing install-yam.sh
-4) Click on ytm.command to run
+1) Read the README.
+2) Run the install-yam.sh bash script in the terminal.
+3) Follow the steps stated after executing install-yam.sh.
+4) Click on ytm.command to run or run the main_run.sh bash script.
 
 # How to Use:
 - (1) ADD:           Takes you a loop where you can add as many YoTube URLs as you want.
