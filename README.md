@@ -43,18 +43,18 @@ create an OK-ish UI though the terminal.
   -Please only use and move around ONE ytm.command for this program!
 
 # What Each Part Does: (as of 7-19-2019)
-YTMB-OTHER      = Folder of old stuff I made and just kept. Not part of code!
-install-ytm.sh  = Used to install over all code.
-links.txt       = Used to store YouTube URL Links.
-main_run.sh     = Main Bash Script for the code as a whole.
-MP3_Files       = Where the MP3 Files are stored after downloading.
-music_run.py    = Python script used as part of downloading process.
-Title-Prints    = Folder that holds print.py, print2.py, and title-state
-   print.py        = Python script to print non-UI for the code.
-   print2.py       = Python script to print non-UI (basic edition) for the code.
-   title-state     = True or False state for the non-UI options.
-README.txt      = README Text File.
-ytm.command	 = Used to execute overall program anywhere.
+- YTMB-OTHER      = Folder of old stuff I made and just kept. Not part of code!
+- install-ytm.sh  = Used to install over all code.
+- links.txt       = Used to store YouTube URL Links.
+- main_run.sh     = Main Bash Script for the code as a whole.
+- MP3_Files       = Where the MP3 Files are stored after downloading.
+- music_run.py    = Python script used as part of downloading process.
+- Title-Prints    = Folder that holds print.py, print2.py, and title-state
+   - print.py        = Python script to print non-UI for the code.
+   - print2.py       = Python script to print non-UI (basic edition) for the code.
+   - title-state     = True or False state for the non-UI options.
+- README.txt      = README Text File.
+- ytm.command	 = Used to execute overall program anywhere.
 
 # Useful Links:
 1) https://github.com/ytdl-org/youtube-dl
