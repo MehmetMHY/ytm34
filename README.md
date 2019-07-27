@@ -35,6 +35,7 @@ A simple terminal console program that allows you to create, a list of youtube U
 - (9) PRINT-OPTIONS: Set terminal console print out.
 
 # Other Notes:
+- As of now, .command files only work on MacOS.
 - Please only use and move around ONE ytm.command for this program!
 
 # What Each Part Does:
