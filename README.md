@@ -36,10 +36,7 @@ A simple terminal console program that allows you to create, a list of youtube U
 - (9) PRINT-OPTIONS: Set terminal console print out.
 
 # Other Notes:
-<<<<<<< HEAD
-=======
 - As of now, .command files only work on MacOS.
->>>>>>> feature
 - Please only use and move around ONE ytm.command for this program!
 
 # What Each Part Does:
@@ -61,7 +58,4 @@ A simple terminal console program that allows you to create, a list of youtube U
 2) https://stackoverflow.com/questions/8409946/how-do-i-make-this-file-sh-executable-via-double-click
 3) https://apple.stackexchange.com/questions/20104/how-do-i-execute-command-line-scripts
 4) https://www.youtube.com/
-<<<<<<< HEAD
-=======
 5) https://github.com/MehmetMHY/YouTube-To-MP3-B
->>>>>>> feature
