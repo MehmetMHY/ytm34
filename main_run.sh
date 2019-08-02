@@ -1,7 +1,7 @@
 # YouTube-To-MP3-B Main Bash Script
 # Notes:
 #   -Option_2 Supported by youtube-dl
-#   -Rest was coded by Mehmet Yilmaz
+#   -The rest of the code was made by Mehmet Yilmaz
 
 check_files () {
 	cd ~/YouTube-To-Mp3
@@ -166,5 +166,5 @@ main_run () {
 
 main_run
 
-#Be Careful Here!
+#Be careful here! It works but its not that good of a solution!
 #killall Terminal
