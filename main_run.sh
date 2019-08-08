@@ -85,6 +85,57 @@ option_four () {
 	done
 }
 
+option_five () {
+	cd ~/YouTube-To-Mp3
+	clear
+
+	while true ; do
+		echo "-Current Troubleshooting Methods-"
+		echo "        (1) Update youtube-dl"
+		echo "        (2) Install youtube-dl again"
+		echo "        (3) Google it"
+		echo "        (4) JUST-EXIT"
+		echo "*Please note that these troubleshoot methods MIGHT work!" ; echo
+		echo "ENTER:" ; read INPUT_FIVE ; echo
+		if [ $INPUT_FIVE == "1" ] ; then
+			echo "-[ Updating youtube-dl ]-" ; echo
+			echo "*Current youtube-dl Verison: "
+			OLDV="$(youtube-dl --version)" ; echo "${OLDV}" ; echo
+			pip install --upgrade youtube-dl
+			sudo pip install --upgrade youtube-dl
+			sudo youtube-dl --update
+			echo ; echo "*Previous youtube-dl Verison:" ; echo "${OLDV}"
+			echo "*Current youtube-dl Verison:" ; youtube-dl --version ; echo
+			echo "[Hit Enter To Return To Main Manu]" ; read PAUSE
+			break
+		elif [ $INPUT_FIVE == "2" ] ; then
+			echo "Installing youtube-dl Again"
+			echo "  * Works as of 8-8-2019"
+			echo "  - youtube-dl GitHub : https://github.com/ytdl-org/youtube-dl"
+			echo "  - MacOS"
+			echo "  - brew"
+			echo '-Loading-'
+			echo -ne '[#####                    ] (20%)\r'  ; sleep 1
+			echo -ne '[##########               ] (40%)\r'  ; sleep 1
+			echo -ne '[###############          ] (60%)\r'  ; sleep 1
+			echo -ne '[####################     ] (80%)\r'  ; sleep 1
+			echo -ne '[#########################] (100%)\r' ; sleep 1 ; echo
+			brew install youtube-dl 
+			break
+		elif [ $INPUT_FIVE == "3" ] ; then
+			echo "Good Luck Googling, I would start from these URLs:"
+			echo "  1) https://github.com/MehmetMHY/YouTube-To-MP3-B/issues"
+			echo "  2) https://github.com/ytdl-org/youtube-dl/issues"
+			echo ; echo "[Hit Enter To Return To Main Manu]" ; read PAUSE
+			break
+		elif [ $INPUT_FIVE == "4" ] ; then
+			break
+		else
+			echo "Try Again!" ; echo
+		fi
+	done
+}
+
 main_run () {
 	cd ~/YouTube-To-Mp3
 	clear_it=true
@@ -122,6 +173,9 @@ main_run () {
 		elif [ $INPUT == "3" ] ; then
 			cd ~/YouTube-To-Mp3
 			mv *.mp3 MP3_Files ; rm *.webm
+
+			cat links.txt >> links_backups.txt
+
 			rm links.txt
 			touch links.txt
 			echo ; echo "...Refreshed" ; echo
@@ -155,6 +209,9 @@ main_run () {
 			cd ~/YouTube-To-Mp3
 		elif [ $INPUT == "9" ] ; then
 			option_four
+			cd ~/YouTube-To-Mp3
+		elif [ $INPUT == "10" ] ; then
+			option_five
 			cd ~/YouTube-To-Mp3
 		else
 			clear
