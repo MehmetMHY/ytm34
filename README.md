@@ -53,9 +53,14 @@ A simple terminal console program that allows you to create, a list of youtube U
 - README.txt      = README Text File.
 - ytm.command	 = Used to execute overall program anywhere.
 
+# Troubleshooting:
+- Update youtube-dl to the newest verison. Check one of the links stated in "Useful Links" for information as to how you can do that.
+- Check out the Issues tab at the YouTube-To-MP3-B GitHub page. If the issue is not posted, please post.
+
 # Useful Links:
 1) https://github.com/ytdl-org/youtube-dl
 2) https://stackoverflow.com/questions/8409946/how-do-i-make-this-file-sh-executable-via-double-click
 3) https://apple.stackexchange.com/questions/20104/how-do-i-execute-command-line-scripts
 4) https://www.youtube.com/
 5) https://github.com/MehmetMHY/YouTube-To-MP3-B
+6) https://askubuntu.com/questions/380438/how-can-i-update-youtube-dl
