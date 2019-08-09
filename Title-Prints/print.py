@@ -4,7 +4,7 @@ class variables:
    PURPLE = '\033[95m' ; BLUE = '\033[94m' ; GREEN = '\033[92m'    ; YELLOW = '\033[93m'
    BOLD = '\033[1m'    ; RED = '\033[91m'  ; UNDERLINE = '\033[4m' ; END = '\033[0m'
 
-verison_num = "1.5"
+verison_num = "1.6"
 
 print("____________________________________________________________________" + variables.RED) ; print()
 print("  ██╗   ██╗ ██████╗ ██╗   ██╗████████╗██╗   ██╗██████╗ ███████╗    ")

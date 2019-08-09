@@ -15,7 +15,7 @@ echo '-Loading-'
 echo -ne '[#####                    ] (20%)\r'  ; sleep 5
 echo -ne '[##########               ] (40%)\r'  ; sleep 5
 echo -ne '[###############          ] (60%)\r'  ; sleep 5
-echo -nne '[####################     ] (80%)\r'  ; sleep 5
+echo -ne '[####################     ] (80%)\r'  ; sleep 5
 echo -ne '[#########################] (100%)\r' ; sleep 5 ; echo
 
 # Install Python3:
