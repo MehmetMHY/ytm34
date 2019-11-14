@@ -195,7 +195,9 @@ main_run () {
 		elif [ $INPUT == "3" ] ; then
 			cd ~/YouTube-To-Mp3
 			mv *.mp3 MP3_Files ; rm *.webm
+			rm *.part
 			cat links.txt >> links_backups.txt
+			echo "   " >> links_backups.txt
 			rm links.txt
 			touch links.txt
 			echo ; echo "...Refreshed" ; echo

@@ -9,6 +9,7 @@ A simple terminal console program that allows you to create, a list of youtube U
 - This code is a Terminal Console program.
 - This code can work with Ubuntu/Linux, but some changes need to be made.
 - All MP3 Files are stored in MP3_Files dir.
+- The install.sh kind of works for MacOS but fails for other UNIX systems like Ubuntu. This will be fixed in an upcoming git push.
 
 ## Requirements:
 - MacOS
@@ -40,6 +41,8 @@ A simple terminal console program that allows you to create, a list of youtube U
 ## Other Notes:
 - As of now, .command files only work on MacOS.
 - Please only use and move around ONE ytm.command for this program!
+- If you havn't, please run the 'Install Certificates.command' file in your Python folder which is most likly in your Applications folder in MacOS.
+-If things get bad, run: sudo youtube-dl --no-check-certificate [ youtube URL ], otherwise dont run this.
 
 ## What Each File Does:
 - YTMB-OTHER        = Folder of old stuff I made and just kept. Not part of code!
