@@ -20,7 +20,7 @@ check_files () {
 	fi
 }
 
-option_one () {
+add_option () {
 	while true ; do
 		echo "-Enter URL or 404 to Exist-"
 		read INPUT_TWO
@@ -78,8 +78,8 @@ option_four () {
 		echo "-Change Print Options-"
 		echo "        (1) PRINT-ALL"
 		echo "        (2) MINIMAL-PRINT"
-		echo "        (3) JUST-EXIT" ; echo "ENTER:"
-		read INPUT_FOUR ; cd Title-Prints
+		echo "        (3) JUST-EXIT"
+		read -p "ENTER: " INPUT_FOUR ; cd Title-Prints
 
 		if [ $INPUT_FOUR == "1" ] ; then
 			echo "true" > title-state
@@ -91,12 +91,20 @@ option_four () {
 
 		elif [ $INPUT_FOUR == "3" ] ; then
 			break
-
 		else
 			echo "Try Again!" ; echo
 
 		fi
 	done
+}
+
+readme_option (){
+	clear_it=false
+	clear ; clear
+	echo ; echo "[----------/README_START/----------]"
+	echo ; cat README* ; echo ; echo
+	echo "[-----------/README_END/-----------]" ; echo
+	echo "-README Content Is Printed Above [↑]-" ;  echo
 }
 
 option_five () {
@@ -110,15 +118,17 @@ option_five () {
 		echo "        (3) Google it"
 		echo "        (4) JUST-EXIT"
 		echo "*Please note that these troubleshoot methods MIGHT work!" ; echo
-		echo "ENTER:" ; read INPUT_FIVE ; echo
+		read -p "ENTER: " INPUT_FIVE ; echo
 
 		if [ $INPUT_FIVE == "1" ] ; then
 			echo "-[ Updating youtube-dl ]-" ; echo
 			echo "*Current youtube-dl Verison: "
 			OLDV="$(youtube-dl --version)" ; echo "${OLDV}" ; echo
 			pip install --upgrade youtube-dl
-			sudo pip install --upgrade youtube-dl
-			sudo youtube-dl --update
+			#sudo pip install --upgrade youtube-dl
+			#sudo youtube-dl --update
+			pip install --upgrade youtube-dl
+			youtube-dl --update
 			echo ; echo "*Previous youtube-dl Verison:" ; echo "${OLDV}"
 			echo "*Current youtube-dl Verison:" ; youtube-dl --version ; echo
 			echo "[Hit Enter To Return To Main Manu]" ; read PAUSE
@@ -151,6 +161,55 @@ option_five () {
 
 		else
 			echo "Try Again!" ; echo
+			
+		fi
+	done
+}
+
+viewExport_option (){
+	clear_it=false
+	cd ~/YouTube-To-Mp3
+	mv *.mp3 MP3_Files ; rm *.webm
+	cd MP3_Files
+	clear ; clear
+	echo "-Current Content-" ; echo
+	ls
+	echo ; echo "  -> Number-of-MP3s: " ; ls | wc -l
+	echo ; echo "-List Is Above [↑]-" ;  echo
+	cd ~/YouTube-To-Mp3
+}
+
+preference_option (){
+	while true ; do
+		echo "-PREFERENCES-"
+		echo "        (1) README"
+		echo "        (2) EDIT-ADD-LIST"
+		echo "        (3) PRINT-OPTIONS"
+		echo "        (4) TROUBLE-SHOOTING"
+		echo "        (5) RETURN TO MAIN MANU" ; echo " "
+
+		read -p "ENTER: " INPUT
+
+		if [ $INPUT == "1" ] ; then
+			readme_option
+		elif [ $INPUT == "2" ] ; then
+			option_three
+			clear
+			cd ~/YouTube-To-Mp3
+		elif [ $INPUT == "3" ] ; then
+			option_four
+			cd ~/YouTube-To-Mp3
+			clear
+		elif [ $INPUT == "4" ] ; then
+			option_five
+			cd ~/YouTube-To-Mp3
+			clear
+		elif [ $INPUT == "5" ] ; then
+			break
+		else
+			clear
+			echo "Try Again!"
+			clear_it=false
 
 		fi
 	done
@@ -182,7 +241,7 @@ main_run () {
 		read INPUT
 
 		if [ $INPUT == "1" ] ; then
-			option_one
+			add_option
 		elif [ $INPUT == "2" ] ; then
 			option_two
 
@@ -211,42 +270,22 @@ main_run () {
 			echo ; echo "-List Is Above [↑]-" ; echo
 
 		elif [ $INPUT == "6" ] ; then
-			clear_it=false
-			clear ; clear
-			echo ; echo "[----------/README_START/----------]"
-			echo ; cat README* ; echo ; echo
-			echo "[-----------/README_END/-----------]" ; echo
-			echo "-README Content Is Printed Above [↑]-" ;  echo
+			viewExport_option
 
 		elif [ $INPUT == "7" ] ; then
-			clear_it=false
-			cd ~/YouTube-To-Mp3
-			mv *.mp3 MP3_Files ; rm *.webm
-			cd MP3_Files
-			clear ; clear
-			echo "-Current Content-" ; echo
-			ls
-			echo ; echo "  -> Number-of-MP3s: " ; ls | wc -l
-			echo ; echo "-List Is Above [↑]-" ;  echo
-			cd ~/YouTube-To-Mp3
-
+			clear
+			preference_option
+			clear
 		elif [ $INPUT == "8" ] ; then
-			option_three
+			clear
+			cd ~/YouTube-To-Mp3/YTMP4
+			bash YTM4.sh
 			cd ~/YouTube-To-Mp3
-
-		elif [ $INPUT == "9" ] ; then
-			option_four
-			cd ~/YouTube-To-Mp3
-
-		elif [ $INPUT == "10" ] ; then
-			option_five
-			cd ~/YouTube-To-Mp3
-
+			clear
 		else
 			clear
 			echo "Try Again!"
 			clear_it=false
-
 		fi
 	done
 }

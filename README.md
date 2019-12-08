@@ -2,7 +2,11 @@
 *YouTube-To-MP3-B README* 
 
 ## Description:
-A simple terminal console program that allows you to create, a list of youtube URL links. Then, convert those URL links to mp3 files. As this is a YouTube to mp3 converting program. This is all possible thanks to youtube-dl, I simply gave it the option of adding lists of URL links well at the same time create an OK-ish UI though the terminal console.
+A simple terminal console program that allows you to create, a list of youtube URL links. Then, convert those URL links to mp3 files. As this is a YouTube to mp3 converting program. This is all possible thanks to youtube-dl, I simply gave it the option of adding lists of URL links well at the same time create an OK-ish UI though the terminal console. I also added a YouTube To MP4 converter which also uses YouTube-DL.
+
+## Credit:
+- The YouTube to MP3/MP4 converting part of the code is done though YouTube-DL. I tried to make my own but YouTube keeps changing certain elements which made it difficuilt and time consuming to get it to work every time YouTube updated something. So its best for this program to use YouTube-DL which has a great team of developers constantly updating and maintaining the code base.
+- All the Bash and Python scripts was created by Mehmet Yilmaz, this code is not made for profit but rather act as a nice personal tool for converting YouTube links into MP3 and/or MP4 files.
 
 ## Important:
 - This code only really works on MacOS.
@@ -27,16 +31,21 @@ A simple terminal console program that allows you to create, a list of youtube U
 4) Click on ytm.command to run or run the main_run.sh bash script.
 
 ## How to Use:
-- (1)  ADD:           Takes you a loop where you can add as many YoTube URLs as you want.
-- (2)  CONVERT:       Uses youtube-dl on all the links you added in ADD.
-- (3)  REFRESH:       Cleans programs directory, use it before closing program. Also clears links.txt file.
-- (4)  EXIT:          Closes over all program.
+##### Main_Manu
+- (1)  ADD: Takes you a loop where you can add as many YoTube URLs as you want.
+- (2)  CONVERT: Uses youtube-dl on all the links you added in ADD.
+- (3)  REFRESH: Cleans programs directory, use it before closing program. Also clears links.txt file.
+- (4)  EXIT: Closes over all program.
 - (5)  VIEW-ADD-LIST: Prints out all the URLs you entered.
-- (6)  README:        Prints out README.
-- (7)  VIEW-EXPORTS:  Prints out all the MP3 files in the MP3_Files folder.
-- (8)  EDIT-ADD-LIST: Edit links.txt file with VIM.
-- (9)  PRINT-OPTIONS: Set terminal console print out.
-- (10) TROUBESHOOTING: Give the user options of troubling shooting any issues with the program. These troubling shooting methods are mainly for when youtube-dl is having issues.
+- (6)  VIEW-EXPORTS: Prints out all the MP3 files in the MP3_Files folder.
+- (7)  PREFERENCES: View more possible options
+- (8)  YOUTUBE-TO-MP4: YouTube To MP4 converter (BETA)
+##### Preferences_Manu
+- (P7-1)  README: Prints out README.
+- (P7-2)  EDIT-ADD-LIST: Edit links.txt file with VIM.
+- (P7-3)  PRINT-OPTIONS: Set terminal console print out.
+- (P7-4)  TROUBLE-SHOOTING: Trouble Shoot any issues with the program.
+- (P7-5)  RETURN TO MAIN MANU: Return to the main manu.
 
 ## Other Notes:
 - As of now, .command files only work on MacOS.
