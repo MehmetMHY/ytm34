@@ -9,14 +9,11 @@ check_files () {
 	if [ -e *.mp3 ] ; then
 		echo "-Misplaced Mp3 Files Have Been Moved : Mmm-"
 		mv *.mp3 MP3_Files
-
 	elif [ -e *.webm ] ; then
 		echo "-Webm Files Have Been Moved : Mmm-"
 		rm *.webm
-
 	else
 		echo "-No Start Issues : Good-"
-
 	fi
 }
 
@@ -28,10 +25,8 @@ add_option () {
 		if [ $INPUT_TWO == "404" ] ; then
 			echo "Exiting ADD"
 			break
-
 		else
 			echo "$INPUT_TWO" >> links.txt
-
 		fi
 	done
 }
@@ -68,10 +63,8 @@ option_four () {
 
 	if [ "$print_all" = true ] ; then
 		echo "  *PRINT-ALL"
-
 	else
 		echo "  *MINIMAL-PRINT"
-
 	fi ; echo
 	
 	while true ; do
@@ -84,16 +77,13 @@ option_four () {
 		if [ $INPUT_FOUR == "1" ] ; then
 			echo "true" > title-state
 			break
-
 		elif [ $INPUT_FOUR == "2" ] ; then
 			echo "false" > title-state
 			break
-
 		elif [ $INPUT_FOUR == "3" ] ; then
 			break
 		else
 			echo "Try Again!" ; echo
-
 		fi
 	done
 }
@@ -133,7 +123,6 @@ option_five () {
 			echo "*Current youtube-dl Verison:" ; youtube-dl --version ; echo
 			echo "[Hit Enter To Return To Main Manu]" ; read PAUSE
 			break
-
 		elif [ $INPUT_FIVE == "2" ] ; then
 			echo "Installing youtube-dl Again"
 			echo "  * Works as of 8-8-2019"
@@ -148,20 +137,30 @@ option_five () {
 			echo -ne '[#########################] (100%)\r' ; sleep 1 ; echo
 			brew install youtube-dl 
 			break
-
 		elif [ $INPUT_FIVE == "3" ] ; then
 			echo "Good Luck Googling, I would start from these URLs:"
 			echo "  1) https://github.com/MehmetMHY/YouTube-To-MP3-B/issues"
-			echo "  2) https://github.com/ytdl-org/youtube-dl/issues"
+			echo "  2) https://github.com/ytdl-org/youtube-dl/issues" ; echo 
+			echo 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBB'
+			echo 'BBMB---------------------BBBB'
+			echo 'BBBB---------------------BBBB'
+			echo 'BBBB---------------------BBBB'
+			echo 'BBBB---------------------BBBB'
+			echo 'BBBB---------------------BBBB'
+			echo 'BBBB---------------------BBBB'
+			echo 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBB'
+			echo 'BBBBBB++++++++++++++++BBBBBBB'
+			echo 'BBBBBB++BBBBB+++++++++BBBBBBB'
+			echo 'BBBBBB++BBBBB+++++++++BBBBBBB'
+			echo 'BBBBBB++BBBBB+++++++++BBBBBBB'
+			echo 'BBBBBB++++++++++++++++BBBBBBB'
+			echo 'BBBBBB++++++++++++++++BBBBBBB'
 			echo ; echo "[Hit Enter To Return To Main Manu]" ; read PAUSE
 			break
-
 		elif [ $INPUT_FIVE == "4" ] ; then
 			break
-
 		else
-			echo "Try Again!" ; echo
-			
+			echo "Try Again!" ; echo			
 		fi
 	done
 }
@@ -172,8 +171,8 @@ viewExport_option (){
 	mv *.mp3 MP3_Files ; rm *.webm
 	cd MP3_Files
 	clear ; clear
-	echo "-Current Content-" ; echo
-	ls
+	echo "-Current Content-"
+	echo ; ls
 	echo ; echo "  -> Number-of-MP3s: " ; ls | wc -l
 	echo ; echo "-List Is Above [↑]-" ;  echo
 	cd ~/YouTube-To-Mp3
@@ -210,7 +209,6 @@ preference_option (){
 			clear
 			echo "Try Again!"
 			clear_it=false
-
 		fi
 	done
 }
@@ -244,13 +242,11 @@ main_run () {
 			add_option
 		elif [ $INPUT == "2" ] ; then
 			option_two
-
 		elif [ $INPUT == "4" ] ; then
 			cd ~/YouTube-To-Mp3
 			mv *.mp3 MP3_Files ; rm *.webm
 			echo "Shutting Down..."
 			break
-
 		elif [ $INPUT == "3" ] ; then
 			cd ~/YouTube-To-Mp3
 			mv *.mp3 MP3_Files ; rm *.webm
@@ -260,7 +256,6 @@ main_run () {
 			rm links.txt
 			touch links.txt
 			echo ; echo "...Refreshed" ; echo
-
 		elif [ $INPUT == "5" ] ; then
 			clear_it=false
 			clear ; clear
@@ -268,10 +263,8 @@ main_run () {
 			cat links.txt
 			echo ; echo "  -> Number-of-Links: " ; wc -l < links.txt
 			echo ; echo "-List Is Above [↑]-" ; echo
-
 		elif [ $INPUT == "6" ] ; then
 			viewExport_option
-
 		elif [ $INPUT == "7" ] ; then
 			clear
 			preference_option
