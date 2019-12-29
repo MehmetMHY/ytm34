@@ -1,7 +1,9 @@
 # YouTube-To-MP3-B Main Bash Script
-# Notes:
-#   -Option_2 Supported by youtube-dl
-#   -The rest of the code was made by Mehmet Yilmaz
+
+# FORMAL CONFESSION / PLEASE READ
+#   - The part of the code that converts a YouTube link into a mp3 and/or mp4 file is supported by the youtube-dl library.
+#   - Baiscally all the code was written and will be maintained by Mehmet Yilmaz but the ability to covert a YouTube link into a mp3 and/or mp4 file is supported by the developers of the youtube-dl library.
+#   - Why Use youtube-dl?: YouTube always its formating which makes it hard for a single developer to maintain a YouTube to mp3/mp4 convert. So its better to reply on a third party source that is maintain by a group of talented developers.
 
 check_files () {
 	cd ~/YouTube-To-Mp3
@@ -114,11 +116,17 @@ option_five () {
 			echo "-[ Updating youtube-dl ]-" ; echo
 			echo "*Current youtube-dl Verison: "
 			OLDV="$(youtube-dl --version)" ; echo "${OLDV}" ; echo
-			pip install --upgrade youtube-dl
-			#sudo pip install --upgrade youtube-dl
+			
+            # [ Other Update Options - It Does Not Work For Most Cases ]
+            #sudo pip install --upgrade youtube-dl
 			#sudo youtube-dl --update
+            #youtube-dl --update
+            
+            # [ Current Update Options - That Usually Works... ]
+            pip install --upgrade youtube-dl
 			pip install --upgrade youtube-dl
-			youtube-dl --update
+            brew upgrade youtube-dl
+            
 			echo ; echo "*Previous youtube-dl Verison:" ; echo "${OLDV}"
 			echo "*Current youtube-dl Verison:" ; youtube-dl --version ; echo
 			echo "[Hit Enter To Return To Main Manu]" ; read PAUSE
@@ -140,21 +148,10 @@ option_five () {
 		elif [ $INPUT_FIVE == "3" ] ; then
 			echo "Good Luck Googling, I would start from these URLs:"
 			echo "  1) https://github.com/MehmetMHY/YouTube-To-MP3-B/issues"
-			echo "  2) https://github.com/ytdl-org/youtube-dl/issues" ; echo 
-			echo 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBB'
-			echo 'BBMB---------------------BBBB'
-			echo 'BBBB---------------------BBBB'
-			echo 'BBBB---------------------BBBB'
-			echo 'BBBB---------------------BBBB'
-			echo 'BBBB---------------------BBBB'
-			echo 'BBBB---------------------BBBB'
-			echo 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBB'
-			echo 'BBBBBB++++++++++++++++BBBBBBB'
-			echo 'BBBBBB++BBBBB+++++++++BBBBBBB'
-			echo 'BBBBBB++BBBBB+++++++++BBBBBBB'
-			echo 'BBBBBB++BBBBB+++++++++BBBBBBB'
-			echo 'BBBBBB++++++++++++++++BBBBBBB'
-			echo 'BBBBBB++++++++++++++++BBBBBBB'
+			echo "  2) https://github.com/ytdl-org/youtube-dl/issues" ; echo
+   
+            bash Title-Prints/internetprintout.sh ; cd ..
+            
 			echo ; echo "[Hit Enter To Return To Main Manu]" ; read PAUSE
 			break
 		elif [ $INPUT_FIVE == "4" ] ; then
@@ -218,7 +215,7 @@ main_run () {
 	clear_it=true
 
 	touch enter.txt ; rm enter.txt
-	clear ; clear
+	#clear ; clear
 
 	while true ; do
 
@@ -242,20 +239,21 @@ main_run () {
 			add_option
 		elif [ $INPUT == "2" ] ; then
 			option_two
-		elif [ $INPUT == "4" ] ; then
-			cd ~/YouTube-To-Mp3
-			mv *.mp3 MP3_Files ; rm *.webm
-			echo "Shutting Down..."
-			break
 		elif [ $INPUT == "3" ] ; then
 			cd ~/YouTube-To-Mp3
-			mv *.mp3 MP3_Files ; rm *.webm
+			mv *.mp3 MP3_Files
+            rm *.webm
 			rm *.part
 			cat links.txt >> links_backups.txt
 			echo "   " >> links_backups.txt
 			rm links.txt
 			touch links.txt
 			echo ; echo "...Refreshed" ; echo
+        elif [ $INPUT == "4" ] ; then
+            cd ~/YouTube-To-Mp3
+            mv *.mp3 MP3_Files ; rm *.webm
+            echo "Shutting Down..."
+            break
 		elif [ $INPUT == "5" ] ; then
 			clear_it=false
 			clear ; clear

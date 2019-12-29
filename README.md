@@ -40,12 +40,17 @@ A simple terminal console program that allows you to create, a list of youtube U
 - (6)  VIEW-EXPORTS: Prints out all the MP3 files in the MP3_Files folder.
 - (7)  PREFERENCES: View more possible options
 - (8)  YOUTUBE-TO-MP4: YouTube To MP4 converter (BETA)
-##### Preferences_Manu
+##### Preferences_Menu
 - (P7-1)  README: Prints out README.
 - (P7-2)  EDIT-ADD-LIST: Edit links.txt file with VIM.
 - (P7-3)  PRINT-OPTIONS: Set terminal console print out.
 - (P7-4)  TROUBLE-SHOOTING: Trouble Shoot any issues with the program.
-- (P7-5)  RETURN TO MAIN MANU: Return to the main manu.
+- (P7-5)  RETURN TO MAIN MANU: Return to the main menu.
+##### YOUTUBE-TO-MP4 Menu
+- (P8-1) Convert YouTube URL to MP4: Uses youtube-dl to list and pick video formates to download.
+- (P8-2) Exported Videos List: Prints out all the video files in the YTM4-Videos folder.
+- (P8-3) Download /Best/ MP4 (BETA): Downloads the BEST video for the URL by merging the best video and audio together for the URL.
+- (P8-4) Exit: Returns to main menu
 
 ## Other Notes:
 - As of now, .command files only work on MacOS.
@@ -54,19 +59,25 @@ A simple terminal console program that allows you to create, a list of youtube U
 -If things get bad, run: sudo youtube-dl --no-check-certificate [ youtube URL ], otherwise dont run this.
 
 ## What Each File Does:
-- YTMB-OTHER        = Folder of old stuff I made and just kept. Not part of code!
-- install-ytm.sh    = Used to install over all code.
-- links.txt         = Used to store YouTube URL Links.
-- main_run.sh       = Main Bash Script for the code as a whole.
-- MP3_Files         = Where the MP3 Files are stored after downloading.
-- music_run.py      = Python script used as part of downloading process.
-- Title-Prints      = Folder that holds print.py, print2.py, and title-state
-   - print.py          = Python script to print non-UI for the code.
-   - print2.py         = Python script to print non-UI (basic edition) for the code.
-   - title-state     = True or False state for the non-UI options.
-- README.txt        = README Text File.
+- YTMB-OTHER = Folder of old stuff I made and just kept. Not part of code!
+- install-ytm.sh = Used to install over all code.
+- links.txt = Used to store YouTube URL Links.
+- main_run.sh = Main Bash Script for the code as a whole.
+- MP3_Files = Where the MP3 Files are stored after downloading.
+- music_run.py = Python script used as part of downloading process.
+- Title-Prints = Folder that holds print.py, print2.py, and title-state
+    - print.py = Python script to print non-UI for the code.
+    - print2.py = Python script to print non-UI (basic edition) for the code.
+    - title-state = True or False state for the non-UI options.
+- README.txt = README Text File.
 - links_backups.txt = A text file that backups every think from the links.txt before the links.txt is refreshed by the REFRESH option.
-- ytm.command	   = Used to execute overall program anywhere.
+- ytm.command = Used to execute overall program anywhere.
+- Previous-Verisons = Olds previous verisons of YouTube-To-MP3-B
+- Title-Prints = Folder that holds print.py, print2.py, and title-state
+    - print.py = Python script to print non-UI for the code.
+    - print2.py = Python script to print non-UI (basic edition) for the code.
+    - title-state = True or False state for the non-UI options.
+    
 
 ## Troubleshooting:
 - Run the Trouble-Shooting option in the code (option 10).
