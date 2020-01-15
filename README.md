@@ -45,7 +45,8 @@ A simple terminal console program that allows you to create, a list of youtube U
 - (P7-2)  EDIT-ADD-LIST: Edit links.txt file with VIM.
 - (P7-3)  PRINT-OPTIONS: Set terminal console print out.
 - (P7-4)  TROUBLE-SHOOTING: Trouble Shoot any issues with the program.
-- (P7-5)  RETURN TO MAIN MANU: Return to the main menu.
+- (P7-5)  Backuped Up URL Links: Prints all the backuped URL links you have used.
+- (P7-6)  RETURN TO MAIN MANU: Return to the main menu.
 ##### YOUTUBE-TO-MP4 Menu
 - (P8-1) Convert YouTube URL to MP4: Uses youtube-dl to list and pick video formates to download.
 - (P8-2) Exported Videos List: Prints out all the video files in the YTM4-Videos folder.

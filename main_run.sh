@@ -50,10 +50,10 @@ option_three () {
 	echo "    - ESC = Exit Edit Mode"
 	echo "    - :wq = Save & Exit Vim" ; echo
 	echo '-Loading-'
-	echo -ne '[#####                    ] (20%)\r'  ; sleep 1
-	echo -ne '[##########               ] (40%)\r'  ; sleep 1
-	echo -ne '[###############          ] (60%)\r'  ; sleep 1
-	echo -ne '[####################     ] (80%)\r'  ; sleep 1
+	echo -ne '[#####                    ] (20%)\r'  ; sleep 2
+	echo -ne '[##########               ] (40%)\r'  ; sleep 2
+	echo -ne '[###############          ] (60%)\r'  ; sleep 2
+	echo -ne '[####################     ] (80%)\r'  ; sleep 2
 	echo -ne '[#########################] (100%)\r' ; sleep 1 ; echo 
 	vim links.txt
 }
@@ -90,7 +90,7 @@ option_four () {
 	done
 }
 
-readme_option (){
+readme_option () {
 	clear_it=false
 	clear ; clear
 	echo ; echo "[----------/README_START/----------]"
@@ -123,8 +123,8 @@ option_five () {
             #youtube-dl --update
             
             # [ Current Update Options - That Usually Works... ]
-            pip install --upgrade youtube-dl
-			pip install --upgrade youtube-dl
+            #pip install --upgrade youtube-dl
+			#pip install --upgrade youtube-dl
             brew upgrade youtube-dl
             
 			echo ; echo "*Previous youtube-dl Verison:" ; echo "${OLDV}"
@@ -138,10 +138,10 @@ option_five () {
 			echo "  - MacOS"
 			echo "  - brew"
 			echo '-Loading-'
-			echo -ne '[#####                    ] (20%)\r'  ; sleep 1
-			echo -ne '[##########               ] (40%)\r'  ; sleep 1
-			echo -ne '[###############          ] (60%)\r'  ; sleep 1
-			echo -ne '[####################     ] (80%)\r'  ; sleep 1
+			echo -ne '[#####                    ] (20%)\r'  ; sleep 2
+			echo -ne '[##########               ] (40%)\r'  ; sleep 2
+			echo -ne '[###############          ] (60%)\r'  ; sleep 2
+			echo -ne '[####################     ] (80%)\r'  ; sleep 2
 			echo -ne '[#########################] (100%)\r' ; sleep 1 ; echo
 			brew install youtube-dl 
 			break
@@ -182,7 +182,8 @@ preference_option (){
 		echo "        (2) EDIT-ADD-LIST"
 		echo "        (3) PRINT-OPTIONS"
 		echo "        (4) TROUBLE-SHOOTING"
-		echo "        (5) RETURN TO MAIN MANU" ; echo " "
+        echo "        (5) BACKUPED-UP-URL-LINKS"
+		echo "        (6) RETURN-TO-MAIN-MANU" ; echo
 
 		read -p "ENTER: " INPUT
 
@@ -200,7 +201,11 @@ preference_option (){
 			option_five
 			cd ~/YouTube-To-Mp3
 			clear
-		elif [ $INPUT == "5" ] ; then
+        elif [ $INPUT == "5" ] ; then
+            cat links_backups.txt ; echo
+            echo "  -> Number-of-Links: "
+            cat links_backups.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l ; echo
+		elif [ $INPUT == "6" ] ; then
 			break
 		else
 			clear
@@ -215,7 +220,7 @@ main_run () {
 	clear_it=true
 
 	touch enter.txt ; rm enter.txt
-	#clear ; clear
+	clear ; clear
 
 	while true ; do
 
@@ -244,8 +249,9 @@ main_run () {
 			mv *.mp3 MP3_Files
             rm *.webm
 			rm *.part
+            rm *.m4a
 			cat links.txt >> links_backups.txt
-			echo "   " >> links_backups.txt
+			echo "####################################################################################################" >> links_backups.txt
 			rm links.txt
 			touch links.txt
 			echo ; echo "...Refreshed" ; echo
@@ -273,6 +279,13 @@ main_run () {
 			bash YTM4.sh
 			cd ~/YouTube-To-Mp3
 			clear
+        elif [ $INPUT == "ls" ] ; then
+            # ls is not listed in the Options, its mainly a developer tool
+            echo ; echo ">Directory: ~/YouTube-To-Mp3"
+            ls ~/YouTube-To-Mp3
+            echo ; echo ">Directory: ~/YouTube-To-Mp3/YTMP4"
+            ls ~/YouTube-To-Mp3/YTMP4/
+            echo ; echo "[Press A Key To Return To Main Manu]" ; read leave
 		else
 			clear
 			echo "Try Again!"
@@ -282,3 +295,6 @@ main_run () {
 }
 
 main_run
+
+### Optional for quiting terminal but it closes ALL terminal windows
+# osascript -e 'tell application "Terminal" to quit' & exit
