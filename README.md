@@ -16,9 +16,10 @@ A simple terminal console program that allows you to create, a list of youtube U
 - The install.sh kind of works for MacOS but fails for other UNIX systems like Ubuntu. This will be fixed in an upcoming git push.
 
 ## Requirements:
-- MacOS
+- MacOS/Linux
 - Python3
-- Brew
+- Bash
+- HomeBrew
 - youtube-dl  :  https://github.com/ytdl-org/youtube-dl
 
 ## How to Install:
@@ -73,13 +74,11 @@ A simple terminal console program that allows you to create, a list of youtube U
 - README.txt = README Text File.
 - links_backups.txt = A text file that backups every think from the links.txt before the links.txt is refreshed by the REFRESH option.
 - ytm.command = Used to execute overall program anywhere.
-- Previous-Verisons = Olds previous verisons of YouTube-To-MP3-B
 - Title-Prints = Folder that holds print.py, print2.py, and title-state
     - print.py = Python script to print non-UI for the code.
     - print2.py = Python script to print non-UI (basic edition) for the code.
     - title-state = True or False state for the non-UI options.
     
-
 ## Troubleshooting:
 - Run the Trouble-Shooting option in the code (option 10).
 - Find another way to update youtube-dl and try it out.

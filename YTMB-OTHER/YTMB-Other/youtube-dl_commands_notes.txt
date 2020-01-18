@@ -1,0 +1,11 @@
+Interesting Commands For youTube-dl - Good For Debugging
+
+[ 9-14-2019 ]
+- If youtube-dl is installed using: pip3 install youtube-dl
+- Error Message:
+"ERROR: Unable to download webpage: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed ..."
+- How Error Was Solved:
+sudo youtube-dl --no-check-certificate URL
+- PLEASE READ: Do not use this command all the time, its not too secure. Avoid this command unless you really need to use it.
+- This code works for MacOS and it was commented/stated by GitHub user jadebh on 6-18-2017. 
+

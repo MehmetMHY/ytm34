@@ -1,5 +1,5 @@
 # Install for YouTube-To-MP3-B (BETA)
-# 12-29-2019
+# 1-17-2020
 
 # Install BREW:
 BREW_INSTALL () {
@@ -86,6 +86,15 @@ Do_Optional () {
         fi
     done
 }
+
+echo
+echo "🚨  ⚠️   🚨  ⚠️   🚨  ⚠️   🚨  ⚠️   🚨  ⚠️   🚨  ⚠️   🚨"
+echo "CAUTION! - Are you sure you want to run this installer? Its Still in its BETA stage so there is a good chance there there will be some errors. Please run this at your own risk"
+echo "🚨  ⚠️   🚨  ⚠️   🚨  ⚠️   🚨  ⚠️   🚨  ⚠️   🚨  ⚠️   🚨"
+echo
+echo "[ Hit Any Key To Continue or CTRL-C to Exit ]"
+read CONTINUE
+echo
 
 clear ; echo "Installing YouTube to Mp3 - B / MacOS Edition" ; echo
 echo "Prerequisites:"
