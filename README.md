@@ -1,6 +1,9 @@
 ![random_logo_3](https://user-images.githubusercontent.com/15916367/62779992-59d18780-babd-11e9-82b4-1e836abc8c8b.png)
 *YouTube-To-MP3-B README* 
 
+## DEPRECATION NOTICE [March 2020]:
+YouTube-To-Mp3 as of March 2020, will no longer be maintained, updated, or supported. This was a fun project, it allowed me to learn a lot about Unix and git and I am thankful for that. But after some thought, I relized that YouTube-To-Mp3 is not really needed, just use youtube-dl with some custom alias(s). It has been fun but as of March 2020, YouTube-To-Mp3 is done.
+
 ## Description:
 A simple terminal console program that allows you to create, a list of youtube URL links. Then, convert those URL links to mp3 files. As this is a YouTube to mp3 converting program. This is all possible thanks to youtube-dl, I simply gave it the option of adding lists of URL links well at the same time create an OK-ish UI though the terminal console. I also added a YouTube To MP4 converter which also uses YouTube-DL.
 
