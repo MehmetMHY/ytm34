@@ -17,14 +17,14 @@
 ## How To Run:
 ### Setup:
 - Make sure you are in the /ytm34 directory and you have the ytm34 in the directory you want
-		pwd > .idealLocation.txt
+* pwd > .idealLocation.txt
 - Create virutal python environment for youtube_dl:
-		python3 -m venv ytm34
+* python3 -m venv ytm34
 
 ## Run:
 1) Go to the ytm34 directory and make sure to do everything listed in the "Setup" section of this README
 2) Run the "run.sh" file:
-		bash run.sh
+* bash run.sh
 3) A menu will pop up, there are mainly 3 options for getting audio and/or video from YouTube.
 4) To make a list, select option 1 or 5 (depending on if you want audio or video (YTM4))
 5) For the list option(s), simply copy and paste your desired URL and hit enter. To exit this menu just type in "404"
@@ -34,6 +34,7 @@
 9) When you are all done, just type 4 then ENTER and you will leave the program.
 10) The last thing this program does before closing is it checks the _ytm34 directory and moves any audio or video files from the _ytm34 directory to the /videos or /music directory depending on the file type.
 11) To access your audio or video files from YouTube, just check out the videos and/or music directory in the _ytm34 directory.
+
 
 
 ## Deprecation Of YouTube-To-Mp3:
