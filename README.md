@@ -1,9 +1,8 @@
 # ytm34 README
-- Date: 8-30-2020
 
 ## About:
-- A nice and simple terminal UI application that makes it easier for people to use and manage youtube_dl.
-- Remembering all the commands was always a pain, having alot of alias(s) for youtube_dl was a bit annoying, and I always struggled to organize the music and video files I downloaded. So to fix this, I made this simple terminal UI that allows the user to easily use and manage youtube_dl with only one alias command and a basic terminal UI, well containing everything in just one directory. This tool also has the option of creating lists of URLs that can then be used with youtube_dl. Not only that, but this tool also has youtube_dl contained in a virtualenv.
+- A nice and simple terminal UI application that makes it easier for people to use and manage youtube_dl. This allows the user to easily use and manage youtube_dl with only one alias command and a basic terminal UI, well containing everything in just one directory. This tool also has the option of creating lists of URLs that can then be used with youtube_dl.
+- To learn more about youtube_dl please checkout their site: https://ytdl-org.github.io/youtube-dl/. But simply put, youtube_dl allows you to download videos and/or audio-files from YouTube. What ytm34 offers is a simple terminal UI that makes it a bit easier to use and manage youtube_dl.
 
 ## Requirements:
 - python3
@@ -16,15 +15,17 @@
 
 ## How To Run:
 ### Setup:
-- Make sure you are in the /ytm34 directory and you have the ytm34 in the directory you want
-  * pwd > .idealLocation.txt
-- Create virutal python environment for youtube_dl:
-  * python3 -m venv ytm34
+1) Make sure you are in the /ytm34 directory and you have the ytm34 in the directory you want
+- pwd > .idealLocation.txt
+2) Create virutal python environment for youtube_dl:
+- python3 -m venv ytm34
+3) (optional) Add an alias to your .bashrc or .zshrc file to activates ytm34/run.sh so you can activate any where in the terminal. Here is an example of my alias I added to my .zshrc file:
+- alias ytm34='cd ~/Desktop/ytm34/ ; bash run.sh'
 
 ## Run:
 1) Go to the ytm34 directory and make sure to do everything listed in the "Setup" section of this README
 2) Run the "run.sh" file:
-  * bash run.sh
+- bash run.sh
 3) A menu will pop up, there are mainly 3 options for getting audio and/or video from YouTube.
 4) To make a list, select option 1 or 5 (depending on if you want audio or video (YTM4))
 5) For the list option(s), simply copy and paste your desired URL and hit enter. To exit this menu just type in "404"
@@ -34,6 +35,16 @@
 9) When you are all done, just type 4 then ENTER and you will leave the program.
 10) The last thing this program does before closing is it checks the _ytm34 directory and moves any audio or video files from the _ytm34 directory to the /videos or /music directory depending on the file type.
 11) To access your audio or video files from YouTube, just check out the videos and/or music directory in the _ytm34 directory.
+
+## Sources:
+1) https://ytdl-org.github.io/youtube-dl/
+2) https://github.com/ytdl-org/youtube-dl
+3) https://docs.python-guide.org/dev/virtualenvs/
+4) Simple virtualenv setup:
+- Create:    python3 -m venv test-env
+- Activate:  source test/bin/activate
+- Deactive:  deactivate
+- DeleteEnv: rm -rf venv
 
 
 
