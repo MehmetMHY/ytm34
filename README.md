@@ -1,6 +1,14 @@
 # _ytm34 README
 - Date: 8-21-2020
 
+## Deprecation Of YouTube-To-Mp3:
+- In 2019, I started and finished a project called "YouTube-To-Mp3". This project did the same thing as _ytm34 but is was much more messy and was mainly focused on MacOS system rather then mainly Unix systems.
+- This older project taught me a lot about bash scripting, youtube_dl, and git. It was a great learning experience.
+- I did use YouTube-To-Mp3 as a tool, but over time I saw that the code was too messy and over complicated for no reason. On top of that, I wanted a way to get mp4/mkv files as well.
+- Due to all of these issues, I deprecated this project on March 2020.
+
+
+
 ## About:
 - A nice and simple terminal UI application that makes it easier for people to use and manage youtube_dl.
 - Remembering all the commands was always a pain, having alot of alias(s) for youtube_dl was a bit annoying, and I always struggled to organize the music and video files I downloaded. So to fix this, I made this simple terminal UI that allows the user to easily use and manage youtube_dl with only one alias command and a basic terminal UI, well containing everything in just one directory. This tool also has the option of creating lists of URLs that can then be used with youtube_dl. Not only that, but this tool also has youtube_dl contained in a virtualenv.
@@ -33,8 +41,3 @@
 11) To access your audio or video files from YouTube, just check out the videos and/or music directory in the _ytm34 directory.
 
 
-## Deprecation Of YouTube-To-Mp3:
-- In 2019, I started and finished a project called "YouTube-To-Mp3". This project did the same thing as _ytm34 but is was much more messy and was mainly focused on MacOS system rather then mainly Unix systems.
-- This older project taught me a lot about bash scripting, youtube_dl, and git. It was a great learning experience.
-- I did use YouTube-To-Mp3 as a tool, but over time I saw that the code was too messy and over complicated for no reason. On top of that, I wanted a way to get mp4/mkv files as well.
-- Due to all of these issues, I deprecated this project on March 2020 and replaced with this one. You can still view "YouTube-To-Mp3" in the /OLD directory.
