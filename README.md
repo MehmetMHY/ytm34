@@ -1,55 +1,97 @@
-# ytm34 README
+![random_logo_3](https://user-images.githubusercontent.com/15916367/62779992-59d18780-babd-11e9-82b4-1e836abc8c8b.png)
+*YouTube-To-MP3-B README* 
 
-## About:
-- A nice and simple terminal UI application that makes it easier for people to use and manage youtube_dl. This allows the user to easily use and manage youtube_dl with only one alias command and a basic terminal UI, well containing everything in just one directory. This tool also has the option of creating lists of URLs that can then be used with youtube_dl.
-- To learn more about youtube_dl please checkout their site: https://ytdl-org.github.io/youtube-dl/. But simply put, youtube_dl allows you to download videos and/or audio-files from YouTube. What ytm34 offers is a simple terminal UI that makes it a bit easier to use and manage youtube_dl.
+## DEPRECATION NOTICE [March 2020]:
+YouTube-To-Mp3 as of March 2020, will no longer be maintained, updated, or supported. This was a fun project, it allowed me to learn a lot about Unix and git and I am thankful for that. But after some thought, I relized that YouTube-To-Mp3 is not really needed, just use youtube-dl with some custom alias(s). It has been fun but as of March 2020, YouTube-To-Mp3 is done.
+
+## Description:
+A simple terminal console program that allows you to create, a list of youtube URL links. Then, convert those URL links to mp3 files. As this is a YouTube to mp3 converting program. This is all possible thanks to youtube-dl, I simply gave it the option of adding lists of URL links well at the same time create an OK-ish UI though the terminal console. I also added a YouTube To MP4 converter which also uses YouTube-DL.
+
+## Credit:
+- The YouTube to MP3/MP4 converting part of the code is done though YouTube-DL. I tried to make my own but YouTube keeps changing certain elements which made it difficuilt and time consuming to get it to work every time YouTube updated something. So its best for this program to use YouTube-DL which has a great team of developers constantly updating and maintaining the code base.
+- All the Bash and Python scripts was created by Mehmet Yilmaz, this code is not made for profit but rather act as a nice personal tool for converting YouTube links into MP3 and/or MP4 files.
+
+## Important:
+- This code only really works on MacOS.
+- This code is a Terminal Console program.
+- This code can work with Ubuntu/Linux, but some changes need to be made.
+- All MP3 Files are stored in MP3_Files dir.
+- The install.sh kind of works for MacOS but fails for other UNIX systems like Ubuntu. This will be fixed in an upcoming git push.
 
 ## Requirements:
-- python3
-- virtualenv
-- youtube_dl
-- bash/unix
+- MacOS/Linux
+- Python3
+- Bash
+- HomeBrew
+- youtube-dl  :  https://github.com/ytdl-org/youtube-dl
 
-## Source(s):
+## How to Install:
+1) Read the README.
+
+2) Run the install-yam.sh bash script in the terminal.
+
+3) Follow the steps stated after executing install-yam.sh.
+
+4) Click on ytm.command to run or run the main_run.sh bash script.
+
+## How to Use:
+##### Main_Manu
+- (1)  ADD: Takes you a loop where you can add as many YoTube URLs as you want.
+- (2)  CONVERT: Uses youtube-dl on all the links you added in ADD.
+- (3)  REFRESH: Cleans programs directory, use it before closing program. Also clears links.txt file.
+- (4)  EXIT: Closes over all program.
+- (5)  VIEW-ADD-LIST: Prints out all the URLs you entered.
+- (6)  VIEW-EXPORTS: Prints out all the MP3 files in the MP3_Files folder.
+- (7)  PREFERENCES: View more possible options
+- (8)  YOUTUBE-TO-MP4: YouTube To MP4 converter (BETA)
+##### Preferences_Menu
+- (P7-1)  README: Prints out README.
+- (P7-2)  EDIT-ADD-LIST: Edit links.txt file with VIM.
+- (P7-3)  PRINT-OPTIONS: Set terminal console print out.
+- (P7-4)  TROUBLE-SHOOTING: Trouble Shoot any issues with the program.
+- (P7-5)  Backuped Up URL Links: Prints all the backuped URL links you have used.
+- (P7-6)  RETURN TO MAIN MANU: Return to the main menu.
+##### YOUTUBE-TO-MP4 Menu
+- (P8-1) Convert YouTube URL to MP4: Uses youtube-dl to list and pick video formates to download.
+- (P8-2) Exported Videos List: Prints out all the video files in the YTM4-Videos folder.
+- (P8-3) Download /Best/ MP4 (BETA): Downloads the BEST video for the URL by merging the best video and audio together for the URL.
+- (P8-4) Exit: Returns to main menu
+
+## Other Notes:
+- As of now, .command files only work on MacOS.
+- Please only use and move around ONE ytm.command for this program!
+- If you havn't, please run the 'Install Certificates.command' file in your Python folder which is most likly in your Applications folder in MacOS.
+-If things get bad, run: sudo youtube-dl --no-check-certificate [ youtube URL ], otherwise dont run this.
+
+## What Each File Does:
+- YTMB-OTHER = Folder of old stuff I made and just kept. Not part of code!
+- install-ytm.sh = Used to install over all code.
+- links.txt = Used to store YouTube URL Links.
+- main_run.sh = Main Bash Script for the code as a whole.
+- MP3_Files = Where the MP3 Files are stored after downloading.
+- music_run.py = Python script used as part of downloading process.
+- Title-Prints = Folder that holds print.py, print2.py, and title-state
+    - print.py = Python script to print non-UI for the code.
+    - print2.py = Python script to print non-UI (basic edition) for the code.
+    - title-state = True or False state for the non-UI options.
+- README.txt = README Text File.
+- links_backups.txt = A text file that backups every think from the links.txt before the links.txt is refreshed by the REFRESH option.
+- ytm.command = Used to execute overall program anywhere.
+- Title-Prints = Folder that holds print.py, print2.py, and title-state
+    - print.py = Python script to print non-UI for the code.
+    - print2.py = Python script to print non-UI (basic edition) for the code.
+    - title-state = True or False state for the non-UI options.
+    
+## Troubleshooting:
+- Run the Trouble-Shooting option in the code (option 10).
+- Find another way to update youtube-dl and try it out.
+- Check out the Issues tab at the YouTube-To-MP3-B GitHub page. If the issue is not posted, please post it and someone MIGHT answer.
+- If all else fails, just Google it!
+
+## Useful Links:
 - https://github.com/ytdl-org/youtube-dl
-
-## How To Run:
-### Setup:
-1) Make sure you are in the /ytm34 directory and you have the ytm34 in the directory you want
-- pwd > .idealLocation.txt
-2) Create virutal python environment for youtube_dl:
-- python3 -m venv ytm34
-3) (optional) Add an alias to your .bashrc or .zshrc file to activates ytm34/run.sh so you can activate any where in the terminal. Here is an example of my alias I added to my .zshrc file:
-- alias ytm34='cd ~/Desktop/ytm34/ ; bash run.sh'
-
-## Run:
-1) Go to the ytm34 directory and make sure to do everything listed in the "Setup" section of this README
-2) Run the "run.sh" file:
-- bash run.sh
-3) A menu will pop up, there are mainly 3 options for getting audio and/or video from YouTube.
-4) To make a list, select option 1 or 5 (depending on if you want audio or video (YTM4))
-5) For the list option(s), simply copy and paste your desired URL and hit enter. To exit this menu just type in "404"
-6) After the list is created, select 3 or 7 to use all the URL(s) in your list with youtube_dl to convert those URL(s) into audio or vidoe files (depending on what you select).
-7) There are other options if you want to mess with them or if you need to use them.
-8) Sometimes, the menu does not pop up again after a youtube_dl job and to fix this you can just type "8" and hit ENTER. If the menu pops up again, then great. But if the menu does not pop up again, just wait a little bit longer. Do CTRL-C if worst comes to worst.
-9) When you are all done, just type 4 then ENTER and you will leave the program.
-10) The last thing this program does before closing is it checks the _ytm34 directory and moves any audio or video files from the _ytm34 directory to the /videos or /music directory depending on the file type.
-11) To access your audio or video files from YouTube, just check out the videos and/or music directory in the _ytm34 directory.
-
-## Sources:
-1) https://ytdl-org.github.io/youtube-dl/
-2) https://github.com/ytdl-org/youtube-dl
-3) https://docs.python-guide.org/dev/virtualenvs/
-4) Simple virtualenv setup:
-- Create:    python3 -m venv test-env
-- Activate:  source test/bin/activate
-- Deactive:  deactivate
-- DeleteEnv: rm -rf venv
-
-
-
-## Deprecation Of YouTube-To-Mp3:
-- In 2019, I started and finished a project called "YouTube-To-Mp3". This project did the same thing as ytm34 but is was much more messy and was mainly focused on MacOS system rather then mainly Unix systems.
-- This older project taught me a lot about bash scripting, youtube_dl, and git. It was a great learning experience.
-- I did use YouTube-To-Mp3 as a tool, but over time I saw that the code was too messy and over complicated for no reason. On top of that, I wanted a way to get mp4/mkv files as well.
-- Due to all of these issues, I deprecated this project on March 2020 and replaced with this one. You can still view "YouTube-To-Mp3" in the /deprecated directory.
+- https://stackoverflow.com/questions/8409946/how-do-i-make-this-file-sh-executable-via-double-click
+- https://apple.stackexchange.com/questions/20104/how-do-i-execute-command-line-scripts
+- https://www.youtube.com/
+- https://github.com/MehmetMHY/YouTube-To-MP3-B
+- https://askubuntu.com/questions/380438/how-can-i-update-youtube-dl
