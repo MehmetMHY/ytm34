@@ -1,6 +1,8 @@
 ##### Title:	YTM34 Bash Executable File
-##### By:			Mehmet Yilmaz
+##### By:		Mehmet Yilmaz
 ##### Date:		8-7-2020
+
+ideal="/Users/mehmet/SandBox/_GIT/GitHub/Personal/ytm34"	# ENTER VALUE HERE
 
 # move mkv, webm, mp4, and/or mp3 files from main directory to music or videos directory
 moveFiles () {
@@ -48,7 +50,7 @@ x=$(which python3 | grep "ytm34" | wc -l)
 if [ "$x" -gt "0" ]; then
 
 	# update youtube_dl, just in case
-	updateYTDL
+	#updateYTDL
 
 	# remove youtube_dl caches
 	youtube-dl --rm-cache-dir
@@ -57,7 +59,6 @@ if [ "$x" -gt "0" ]; then
 	python3 .RUN.py
 
 	# organize files in main directory
-	ideal="/home/mehmet/SandBox/_ytm34"
 	current=$(pwd)
 	if [ "$ideal" == "$current" ]
 	then
