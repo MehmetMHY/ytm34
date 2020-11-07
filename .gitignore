@@ -1,3 +1,6 @@
 .DS_Store
 ytm34/
-
+*.mp3
+*.mp4
+*.webm
+*.mkv
