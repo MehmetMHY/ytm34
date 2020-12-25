@@ -72,7 +72,7 @@ if [ "$x" -gt "0" ]; then
 	deactivate
 
 	# show ytm34 storage takeup (MB, GB, etc)
-	printf "\033[0;36mSPACE:\033[0m" ; echo ; printf "\033[0;33mUsed    File/Dir\033[0m" ; echo ; du -hs * | sort -hr
+	echo ; printf "\033[0;36mSPACE:\033[0m" ; echo ; printf "\033[0;33mUsed    File/Dir\033[0m" ; echo ; du -hs * | sort -hr
 else
 	echo "youtube_dl python env not found/working, please look into the issue"
 fi

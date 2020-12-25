@@ -61,6 +61,7 @@ then
     else
         mkdir videos
     fi
+    echo "videos/ directory has been created"
 
     # create music/ directory
     x=$(ls -a | grep music | wc -l)
@@ -69,6 +70,14 @@ then
     else
         mkdir music
     fi
+    echo "music/ directory has been created"
+    echo
+
+    touch .listBackup3.txt
+    echo "ytm3 backup list created"
+
+    touch .listBackup4.txt
+    echo "ytm4 backup list created"
 
 # clear certain files for git pushing
 elif [ "$1" == "-clear"  ]
@@ -106,7 +115,7 @@ else
     echo "   ß     = print options"
     echo " -up     = update youtube_dl"
     echo " -mve    = setup python3 environment"
-    echo " -mcd    = create video & music directories"
+    echo " -mcd    = create video & music directories and files"
     echo " -clear  = clear certain things for git pushing"
 fi
 
