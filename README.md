@@ -48,3 +48,6 @@
 - This older project taught me a lot about bash scripting, youtube_dl, and git. It was a great learning experience.
 - I did use YouTube-To-Mp3 as a tool, but over time I saw that the code was too messy and over complicated for no reason. On top of that, I wanted a way to get mp4/mkv files as well.
 - Due to all of these issues, I deprecated this project on March 2020 and moved it to the deprecated git branch.
+- The deprecated YouTube-To-Mp3 project can be accessed though the "deprecated" branch which can also be accessed though this [link](https://github.com/MehmetMHY/ytm34/tree/deprecated).
+
+
