@@ -1,13 +1,5 @@
-![ytm34_image](https://user-images.githubusercontent.com/15916367/98440967-4abef800-20b9-11eb-8d14-5310b72b8ac5.png)
-
-# _ytm34 README
-- Date: 11-4-2020
-
-## Deprecation Of YouTube-To-Mp3:
-- In 2019, I started and finished a project called "YouTube-To-Mp3". This project did the same thing as _ytm34 but is was much more messy and was mainly focused on MacOS system rather then mainly Unix systems.
-- This older project taught me a lot about bash scripting, youtube_dl, and git. It was a great learning experience.
-- I did use YouTube-To-Mp3 as a tool, but over time I saw that the code was too messy and over complicated for no reason. On top of that, I wanted a way to get mp4/mkv files as well.
-- Due to all of these issues, I deprecated this project on March 2020 and moved it to the deprecated git branch.
+# ytm34 - Simple Terminal UI for youtube-dl
+- Date: 12-25-2020
 
 ## About:
 - A nice and simple terminal UI application that makes it easier for people to use and manage youtube_dl.
@@ -19,13 +11,17 @@
 - bash/unix
 
 ## Source(s):
-- https://youtube-dl.org/
-- https://github.com/ytdl-org/youtube-dl
+- [youtube-dl webpage](https://youtube-dl.org/)
+- [youtube-dl github page](https://github.com/ytdl-org/youtube-dl)
 
 ## How To Run:
 ### Prep:
-- Update the $PWD in the run.sh to the directory you want to place the _ytm34 directory
-- Make sure Python's virtualenv is installed and the given env (ytm34) works by testing some ytm34 commands after activating it
+- Make sure these are installed: python3 & pip3
+- Run the following commands in ytm34/:
+	- bash tool.sh -mve
+	- bash tool.sh -mcd
+	- bash tool.sh -up
+
 
 ## Run (shorter):
 1) Make sure you have requirements
@@ -47,4 +43,8 @@
 10) The last thing this program does before closing is it checks the _ytm34 directory and moves any audio or video files from the _ytm34 directory to the /videos or /music directory depending on the file type.
 11) To access your audio or video files from YouTube, just check out the videos and/or music directory in the _ytm34 directory.
 
-
+## Deprecation Of YouTube-To-Mp3:
+- In 2019, I started and finished a project called "YouTube-To-Mp3". This project did the same thing as _ytm34 but is was much more messy and was mainly focused on MacOS system rather then mainly Unix systems.
+- This older project taught me a lot about bash scripting, youtube_dl, and git. It was a great learning experience.
+- I did use YouTube-To-Mp3 as a tool, but over time I saw that the code was too messy and over complicated for no reason. On top of that, I wanted a way to get mp4/mkv files as well.
+- Due to all of these issues, I deprecated this project on March 2020 and moved it to the deprecated git branch.
