@@ -131,7 +131,7 @@ dmypy.json
 # MacOS files
 .DS_Store
 
-# Large Video Files
+# Video Files
 *.mp4
 *.webm
 *.mpg
@@ -149,11 +149,22 @@ dmypy.json
 *.flv
 *.swf
 *.avchd
-*.mp3
 *.mp4
 *.webm
 *.mkv
 
-# ytm34 files
+# Audio Files
+*.mp3
+*.m4a
+*.flac
+*.aac
+*.wav
+*.dsd
+*.ogg
+*.wma
+*.alac
+*.aiff
+
+# YTM34 Related Files
 ytm34/
 macos/

@@ -28,17 +28,23 @@ then
         if [ "$x" -gt "0" ]; then
             python3 -m venv ytm34
 
-            echo "ytm34 python env is setup, activate it: "
-            echo " - command: source ytm34/bin/activate"
+            echo "YOUR NOT DONE YET! APPLY THE FOLLOWING STEPS TO FINISH UP SETTING UP THE ENV!"
+            echo 
+            echo "1) ytm34 python env is setup, activate it: "
+            echo "  -command: source ytm34/bin/activate"
             echo
-            echo "Now, make sure this is working!"
-            echo " - command: which python3"
+            echo "2) Now, make sure this is working!"
+            echo "  -command: which python3"
+            echo "    ^-The output should contain ytm34/ in it!"
             echo
-            echo "Then, install the following: "
-            echo " - command: pip3 install --upgrade pip"
-            echo " - command: pip3 install --upgrade youtube_dl"
+            echo "3) Then, install the following: "
+            echo "  -command: pip3 install --upgrade pip"
+            echo "  -command: pip3 install --upgrade youtube_dl"
             echo
-            echo "Finally exit this env, run the following command: deactivate"
+            echo "4) Finally exit this env, run the following: "
+            echo "  -command: deactivate"
+            echo
+            echo "5) Everything should be working now!"
             echo
 
         else
@@ -50,7 +56,7 @@ then
         echo "Can't run script, move script to ytm34 directory!"
     fi
 
-# create  videos and music directories
+# create videos and music directories
 elif [ "$1" == "-mcd"  ]
 then
 

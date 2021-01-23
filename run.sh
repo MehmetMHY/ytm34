@@ -1,6 +1,6 @@
 ##### Title:	YTM34 Bash Executable File
 ##### By:		Mehmet Yilmaz
-##### Date:		8-7-2020
+##### Date:		1-23-2021
 
 ideal="/Users/mehmet/SandBox/_GIT/GitHub/Personal/ytm34"	# ENTER VALUE HERE
 
@@ -74,7 +74,15 @@ if [ "$x" -gt "0" ]; then
 	# show ytm34 storage takeup (MB, GB, etc)
 	echo ; printf "\033[0;36mSPACE:\033[0m" ; echo ; printf "\033[0;33mUsed    File/Dir\033[0m" ; echo ; du -hs * | sort -hr
 else
-	echo "youtube_dl python env not found/working, please look into the issue"
+	echo "youtube_dl python env not found/working, please look into the issue!"
+	echo "Try this:"
+	echo "	1) go to ytm34/ directory"
+	echo "	2) run:		bash tool.sh -mve"
+	echo "	3) follow the steps presented by the tool.sh script"
+	echo
+	echo "*if there does not work, please file an issue on GitHub:"
+	echo "		https://github.com/MehmetMHY/ytm34"
+	echo
 fi
 
 
