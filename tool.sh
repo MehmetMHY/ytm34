@@ -41,6 +41,8 @@ then
             echo "  -command: pip3 install --upgrade pip"
             echo "  -command: pip3 install --upgrade youtube_dl"
             echo
+            echo "  -ALL_AT_ONCE: pip3 install --upgrade pip ; pip3 install --upgrade youtube_dl"
+            echo
             echo "4) Finally exit this env, run the following: "
             echo "  -command: deactivate"
             echo

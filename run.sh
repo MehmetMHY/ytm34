@@ -6,30 +6,39 @@ ideal="/Users/mehmet/SandBox/_GIT/GitHub/Personal/ytm34"	# ENTER VALUE HERE
 
 # move mkv, webm, mp4, and/or mp3 files from main directory to music or videos directory
 moveFiles () {
+	printf "\033[0;36mMOVED_ITEMS:\033[0m" ; echo
 	x=$(ls -a | grep ".mkv" | wc -l)
 	if [ "$x" -gt "0" ]; then
-		mv *.mkv videos ; echo "Moved mkv files"
+		tmp=$(ls -a | grep "mkv" | wc -l | sed 's/ //g')
+		mv *.mkv videos
+		echo "Moved $tmp mkv files"
 	else
 		echo "No mkv  files found, so no need to move anything"
 	fi
 
 	x=$(ls -a | grep ".webm" | wc -l)
 	if [ "$x" -gt "0" ]; then
-		echo "Moved webm files" ; mv *.webm videos
+		tmp=$(ls -a | grep "webm" | wc -l | sed 's/ //g')
+		echo "Moved $tmp webm files"
+		mv *.webm videos
 	else
 		echo "No webm files found, so no need to move anything"
 	fi
 
 	x=$(ls -a | grep ".mp4" | wc -l)
 	if [ "$x" -gt "0" ]; then
-		echo "Moved mp4 files" ; mv *.mp4 videos
+		tmp=$(ls -a | grep "mp4" | wc -l | sed 's/ //g')
+		echo "Moved $tmp mp4 files"
+		mv *.mp4 videos
 	else
 		echo "No mp4  files found, so no need to move anything"
 	fi
 
 	x=$(ls -a | grep ".mp3" | wc -l)
 	if [ "$x" -gt "0" ]; then
-		echo "Moved mp3 files" ; mv *.mp3 music
+		tmp=$(ls -a | grep "mp3" | wc -l | sed 's/ //g')
+		echo "Moved $tmp mp3 files"
+		mv *.mp3 music
 	else
 		echo "No mp3  files found, so no need to move anything"
 	fi
@@ -62,7 +71,7 @@ if [ "$x" -gt "0" ]; then
 	current=$(pwd)
 	if [ "$ideal" == "$current" ]
 	then
-		printf "\033[0;36mMOVED_ITEMS:\033[0m" ; echo
+		echo
 		moveFiles
 	else
 		echo "Not ideal PWD, move to $(ideal) directory!"
@@ -72,7 +81,7 @@ if [ "$x" -gt "0" ]; then
 	deactivate
 
 	# show ytm34 storage takeup (MB, GB, etc)
-	echo ; printf "\033[0;36mSPACE:\033[0m" ; echo ; printf "\033[0;33mUsed    File/Dir\033[0m" ; echo ; du -hs * | sort -hr
+	#echo ; printf "\033[0;36mSPACE:\033[0m" ; echo ; printf "\033[0;33mUsed    File/Dir\033[0m" ; echo ; du -hs * | sort -hr
 else
 	echo "youtube_dl python env not found/working, please look into the issue!"
 	echo "Try this:"

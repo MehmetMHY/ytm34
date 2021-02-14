@@ -30,14 +30,20 @@ def exportExecute(shFile, backupFile):
     os.system("cat " + shFile + " > " + backupFile)
     os.system("> " + shFile)
 
+def sps(amount):
+    spacing = ""
+    for i in range(amount):
+        spacing = spacing + " "
+    return spacing
+
 def options():
-    print(Cs.BOLD + Cs.RED + Cs.UNDERLINE + "UNCOMPLICATED YOUTUBE-DL" + Cs.END)
-    print(Cs.PURPLE + "audio:" + Cs.END + "           " +  Cs.PURPLE + "video:" + Cs.END)
-    print("  1) Make List   5) Make List  ")
-    print("  2) Edit List   6) Edit List  ")
-    print(" *3) YouTube-DL *7) YouTube-DL ")
-    print("  4) EXIT        8) Restart    ")
-    #print("  U) Update youtube_dl")
+    print(Cs.BOLD + Cs.RED + Cs.UNDERLINE + "Simplistic YouTube-DL Console UI" + Cs.END)
+    print(Cs.PURPLE + "audio:" + Cs.END + sps(10) +  Cs.PURPLE + "video:" + Cs.END)
+    print("  1) Make List    5) Make List   ")
+    print("  2) Edit List    6) Edit List   ")
+    print(" *3) YouTube-DL  *7) YouTube-DL  ")
+    print("  4) EXIT         8) Restart     ")
+    print("  H) Hidden")
 
 def updateYouTubeDL():
     while(True):
@@ -52,23 +58,57 @@ def updateYouTubeDL():
             break
         os.system("clear")
 
+def hiddenOptions():
+    print(Cs.UNDERLINE + "YTM34 HIDDEN OPTIONS" + Cs.END)
+    print("U = Update youtube_dl in the ytm34/ environment")
+    print("ls = List all files in music/ and videos/ directory")
+    print("space = List ytm34 directories and their sizes ")
+    print()
+
+def printLS(music_path, videos_path):
+    print(Cs.UNDERLINE  + Cs.BLUE + "MUSIC & VIDEO FILES [LS]" + Cs.END)
+    os.system("echo 'DATE: ' $(date)")
+    print()
+    print("Music/")
+    os.system("ls " + str(music_path))
+    temp = "echo '>Total Files:' $(ls " + str(music_path) + " | wc -l | tr -d ' ')"
+    os.system(str(temp))
+    print()
+    print("Videos/")
+    os.system("ls " + str(videos_path))
+    temp = "echo '>Total Files:' $(ls " + str(videos_path) + " | wc -l | tr -d ' ')"
+    os.system(str(temp))
+    print()
+
+def ifclear(boolclear):
+    if(boolclear):
+        os.system("clear")
+    else:
+        boolclear = False
+    return boolclear
+
+def spaceCommand():
+    tmp = 'printf "\033[0;36mSPACE:\033[0m" ; echo ; printf "\033[0;33mUsed    File/Dir\033[0m" ; echo ; du -hs * | sort -hr'
+    os.system(tmp)
+
 def main():
     invalidInput = False
+    clearTerminal = True
     counter = 0
     doneMessage = "\n[ Download Completed, Hit ENTER To Continue]\n"
+    printInitialMessage = True
 
     while(True):
 
-        counter = counter + 1
-
-        os.system("clear")
+        ifclear(clearTerminal)
 
         if(invalidInput):
             print(Cs.RED + "\nInvalid Input, Try Again!" + Cs.END)
             invalidInput = False
 
-        if(counter == 1):
+        if(printInitialMessage):
             print(">Use EXIT [4], not CTRL-C! \n")
+            printInitialMessage = False
         options()
         userInput = input(Cs.GREEN + "ENTER: " + Cs.END)
 
@@ -76,7 +116,7 @@ def main():
             createLists(".ytm3Links.txt", "youtube-dl --extract-audio --audio-format mp3 ", "audio")
         elif(userInput == "2"):
             os.system("vim .ytm3Links.txt")
-        elif(userInput == "3"): # using youtube_dl (audio)
+        elif(userInput == "3"): # uing youtube_dl (audio)
             exportExecute(".ytm3Links.txt", ".listBackup3.txt")
             delay = input(Cs.RED + doneMessage + Cs.END)
         elif(userInput == "4"):
@@ -90,6 +130,19 @@ def main():
             delay = input(Cs.RED + doneMessage + Cs.END)
         elif(userInput == "U"):
             updateYouTubeDL()
+        elif(userInput == "ls"):
+            os.system("clear")
+            printLS("music", "videos")
+            clearTerminal = False
+        elif(userInput == "H" or userInput == "h"):
+            os.system("clear")
+            hiddenOptions()
+            clearTerminal = False
+        elif(userInput == "space"):
+            os.system("clear")
+            spaceCommand()
+            print()
+            clearTerminal = False
         else:
             if(userInput != "8"):
                 invalidInput = True
