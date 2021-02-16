@@ -43,11 +43,4 @@
 10) The last thing this program does before closing is it checks the _ytm34 directory and moves any audio or video files from the _ytm34 directory to the /videos or /music directory depending on the file type.
 11) To access your audio or video files from YouTube, just check out the videos and/or music directory in the _ytm34 directory.
 
-## Deprecation Of YouTube-To-Mp3:
-- In 2019, I started and finished a project called "YouTube-To-Mp3". This project did the same thing as _ytm34 but is was much more messy and was mainly focused on MacOS system rather then mainly Unix systems.
-- This older project taught me a lot about bash scripting, youtube_dl, and git. It was a great learning experience.
-- I did use YouTube-To-Mp3 as a tool, but over time I saw that the code was too messy and over complicated for no reason. On top of that, I wanted a way to get mp4/mkv files as well.
-- Due to all of these issues, I deprecated this project on March 2020 and moved it to the deprecated git branch.
-- The deprecated YouTube-To-Mp3 project can be accessed though the "deprecated" branch which can also be accessed though this [link](https://github.com/MehmetMHY/ytm34/tree/deprecated).
-
 
