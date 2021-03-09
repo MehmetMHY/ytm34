@@ -10,38 +10,50 @@ moveFiles () {
 	x=$(ls -a | grep ".mkv" | wc -l)
 	if [ "$x" -gt "0" ]; then
 		tmp=$(ls -a | grep "mkv" | wc -l | sed 's/ //g')
+		echo "- Moved $tmp mkv files:"
+		ls -a | grep ".mkv" | nl
 		mv *.mkv videos
-		echo "Moved $tmp mkv files"
 	else
 		echo "No mkv  files found, so no need to move anything"
 	fi
 
+	echo
+
 	x=$(ls -a | grep ".webm" | wc -l)
 	if [ "$x" -gt "0" ]; then
 		tmp=$(ls -a | grep "webm" | wc -l | sed 's/ //g')
-		echo "Moved $tmp webm files"
+		echo "- Moved $tmp webm files:"
+		ls -a | grep ".webm" | nl
 		mv *.webm videos
 	else
 		echo "No webm files found, so no need to move anything"
 	fi
 
+	echo
+
 	x=$(ls -a | grep ".mp4" | wc -l)
 	if [ "$x" -gt "0" ]; then
 		tmp=$(ls -a | grep "mp4" | wc -l | sed 's/ //g')
-		echo "Moved $tmp mp4 files"
+		echo "- Moved $tmp mp4 files:"
+		ls -a | grep ".mp4" | nl
 		mv *.mp4 videos
 	else
 		echo "No mp4  files found, so no need to move anything"
 	fi
 
+	echo
+
 	x=$(ls -a | grep ".mp3" | wc -l)
 	if [ "$x" -gt "0" ]; then
 		tmp=$(ls -a | grep "mp3" | wc -l | sed 's/ //g')
-		echo "Moved $tmp mp3 files"
+		echo "- Moved $tmp mp3 files:"
+		ls -a | grep ".mp3" | nl
 		mv *.mp3 music
 	else
 		echo "No mp3  files found, so no need to move anything"
 	fi
+
+	echo
 }
 
 # update youtube_dl if need be
@@ -71,7 +83,6 @@ if [ "$x" -gt "0" ]; then
 	current=$(pwd)
 	if [ "$ideal" == "$current" ]
 	then
-		echo
 		moveFiles
 	else
 		echo "Not ideal PWD, move to $(ideal) directory!"
