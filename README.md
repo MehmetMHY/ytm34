@@ -1,5 +1,5 @@
 # ytm34 - Simple Terminal UI for youtube-dl
-- Date: 12-25-2020
+- Date: 3-24-2021
 
 ## About:
 - A nice and simple terminal UI application that makes it easier for people to use and manage youtube_dl.
@@ -18,21 +18,26 @@
 ### Prep:
 - Make sure these are installed: python3 & pip3
 - Run the following commands in ytm34/:
-	- bash tool.sh -mve
-	- bash tool.sh -mcd
-	- bash tool.sh -up
 
+        bash tool.sh -mve
 
-## Run (shorter):
-1) Make sure you have requirements
-2) Run py_env_setup.sh script
-3) Run run.sh
-4) Enter 4-ENTER to exit
+        bash tool.sh -mcd
 
-## Run (longer):
-1) Go to the _ytm34 directory and make sure to do everything listed in the "Prep" section of this README
+        bash tool.sh -up
+
+        bash tool.sh -ile
+
+- In the newly created .ideal_loc, there is a variable called ytm34_ideal that is being exported. Set this variable equal to the PWM of the ytm34/ directory in your current setup (ex: ~/Desktop/ytm34/).
+- To make it easier to use ytm34, please create an alias in your shell's initial user log in file. This file could be the following: .zshrc, .bashrc, etc. Make an alias that looks something like this (please change the cd path to fit your setup):
+
+        alias ytm34="cd ~/Desktop/ytm34/ ; source .ideal_loc ; bash run.sh ; cd $OLDPWD"
+
+## Run:
+1) Go to the ytm34 directory and make sure to do everything listed in the "Prep" section of this README
 2) Run the "run.sh" file:
-- command: bash run.sh
+
+        bash run.sh
+
 3) A menu will pop up, there are mainly 3 options for getting audio and/or video from YouTube.
 4) To make a list, select option 1 or 5 (depending on if you want audio or video (YTM4))
 5) For the list option(s), simply copy and paste your desired URL and hit enter. To exit this menu just type in "404"

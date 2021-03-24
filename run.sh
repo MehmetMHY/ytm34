@@ -2,7 +2,7 @@
 ##### By:		Mehmet Yilmaz
 ##### Date:		1-23-2021
 
-ideal="/Users/mehmet/SandBox/_GIT/GitHub/Personal/ytm34"	# ENTER VALUE HERE
+ideal=$ytm34_ideal
 
 # move mkv, webm, mp4, and/or mp3 files from main directory to music or videos directory
 moveFiles () {

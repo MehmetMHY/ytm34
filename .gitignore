@@ -168,3 +168,5 @@ dmypy.json
 # YTM34 Related Files
 ytm34/
 macos/
+.ideal_loc
+

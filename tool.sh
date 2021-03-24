@@ -1,5 +1,4 @@
 ### YTM34 Tool Script
-# - Date: 11-4-2020
 # - About: Useful tool for setting-up/Managing YTM34
 
 # update youtube_dl if need be
@@ -117,10 +116,23 @@ then
     echo "Updaing youtube_dl..."
     updateYTDL
 
+# create .ideal_loc file for ideal location setup
+elif [ "$1" == "-ile"  ]
+then
+    touch .ideal_loc
+    echo "# YTM34 Ideal Location - ENTER IDEAL LOC HERE!" > .ideal_loc
+    echo "export ytm34_ideal=''" >> .ideal_loc
+
+    echo ">.ideal_loc file was created! Please enter the PWM of the ytm34/ directory in your current setup. Use the PWD command if need be."
+    echo ">CAT of .ideal_loc file:"
+    cat .ideal_loc
+    echo
+
 else
     # ß = default option with out any options selected
     echo "[OPTIONS]"
     echo "   ß     = print options"
+    echo " -ile    = Create/Override .ideal_loc file"
     echo " -up     = update youtube_dl"
     echo " -mve    = setup python3 environment"
     echo " -mcd    = create video & music directories and files"
