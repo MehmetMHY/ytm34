@@ -1,5 +1,5 @@
 # ytm34 - Simple Terminal UI for youtube-dl
-- Date: 3-24-2021
+- Date: 3-25-2021
 
 ## About:
 - A nice and simple terminal UI application that makes it easier for people to use and manage youtube_dl.
@@ -30,7 +30,7 @@
 - In the newly created .ideal_loc, there is a variable called ytm34_ideal that is being exported. Set this variable equal to the PWM of the ytm34/ directory in your current setup (ex: ~/Desktop/ytm34/).
 - To make it easier to use ytm34, please create an alias in your shell's initial user log in file. This file could be the following: .zshrc, .bashrc, etc. Make an alias that looks something like this (please change the cd path to fit your setup):
 
-        alias ytm34="cd ~/Desktop/ytm34/ ; source .ideal_loc ; bash run.sh ; cd $OLDPWD"
+        alias ytm34="cd ~/Desktop/ytm34/ ; bash run.sh ; cd $OLDPWD"
 
 ## Run:
 1) Go to the ytm34 directory and make sure to do everything listed in the "Prep" section of this README

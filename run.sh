@@ -2,8 +2,6 @@
 ##### By:		Mehmet Yilmaz
 ##### Date:		1-23-2021
 
-ideal=$ytm34_ideal
-
 # move mkv, webm, mp4, and/or mp3 files from main directory to music or videos directory
 moveFiles () {
 	printf "\033[0;36mMOVED_ITEMS:\033[0m" ; echo
@@ -69,6 +67,7 @@ source ytm34/bin/activate
 
 x=$(which python3 | grep "ytm34" | wc -l)
 if [ "$x" -gt "0" ]; then
+	ideal=$(cat .ideal_loc)
 
 	# update youtube_dl, just in case
 	#updateYTDL

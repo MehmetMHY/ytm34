@@ -120,13 +120,7 @@ then
 elif [ "$1" == "-ile"  ]
 then
     touch .ideal_loc
-    echo "# YTM34 Ideal Location - ENTER IDEAL LOC HERE!" > .ideal_loc
-    echo "export ytm34_ideal=''" >> .ideal_loc
-
     echo ">.ideal_loc file was created! Please enter the PWM of the ytm34/ directory in your current setup. Use the PWD command if need be."
-    echo ">CAT of .ideal_loc file:"
-    cat .ideal_loc
-    echo
 
 else
     # ß = default option with out any options selected
