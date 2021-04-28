@@ -114,22 +114,29 @@ def main():
 
         if(userInput == "1"):
             createLists(".ytm3Links.txt", "youtube-dl --extract-audio --audio-format mp3 ", "audio")
+            clearTerminal = True
         elif(userInput == "2"):
             os.system("vim .ytm3Links.txt")
+            clearTerminal = True
         elif(userInput == "3"): # uing youtube_dl (audio)
             exportExecute(".ytm3Links.txt", ".listBackup3.txt")
             delay = input(Cs.RED + doneMessage + Cs.END)
+            clearTerminal = True
         elif(userInput == "4"):
             break
         elif(userInput == "5"):
             createLists(".ytm4Links.txt", "youtube-dl -f bestvideo+bestaudio ", "video")
+            clearTerminal = True
         elif(userInput == "6"):
             os.system("vim .ytm4Links.txt")
+            clearTerminal = True
         elif(userInput == "7"): # using youtube_dl (video)
             exportExecute(".ytm4Links.txt", ".listBackup4.txt")
             delay = input(Cs.RED + doneMessage + Cs.END)
+            clearTerminal = True
         elif(userInput == "U"):
             updateYouTubeDL()
+            clearTerminal = True
         elif(userInput == "ls"):
             os.system("clear")
             printLS("music", "videos")
