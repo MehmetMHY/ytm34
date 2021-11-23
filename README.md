@@ -1,3 +1,7 @@
+---
+# ***DEPRECATED (October 2021)***
+---
+
 # ytm34 - Simple Terminal UI for youtube-dl
 - Date: 3-25-2021
 
