@@ -33,14 +33,15 @@ def pick_option(message, options, emsg=None):
     
     print(message)
     print("OPTIONS:")
-    for i in range(len(options)):
-        print("  " + str(i) + ") " + str(options[i]))
+    for key in options:
+        tmp = "  " + str(key)
+        if options[key] != None or options[key] != "":
+            tmp = tmp + ") " + str(options[key])
+        print(tmp)
     
     while(True):
         choice = str(input("CHOICE: "))
-        if choice.isnumeric():
-            choice = int(choice)
-            if choice >= 0 and choice < len(options):
-                return int(choice)
+        if choice in options:
+            return choice
         print(emsg)
 
