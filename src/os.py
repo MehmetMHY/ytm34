@@ -35,3 +35,10 @@ def os_move(previous, post):
             return 0
     return -1
 
+def vim_open_file(file_path):
+    if os.path.isfile(str(file_path)):
+        cmd = "vim " + str(file_path).replace(" ", "")
+        os.system(cmd)
+        return 0
+    return -1
+
