@@ -42,3 +42,6 @@ def vim_open_file(file_path):
         return 0
     return -1
 
+def clear_console():
+    os.system("clear")
+
