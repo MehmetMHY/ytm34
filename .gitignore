@@ -165,10 +165,6 @@ dmypy.json
 *.alac
 *.aiff
 
-# YTM34 Related Files
-ytm34/
-personal/
-.ideal_loc
-less_push.sh
-
+# Project Files
+.DS_Store
 
