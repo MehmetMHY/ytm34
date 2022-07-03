@@ -1,4 +1,5 @@
 import subprocess
+import os
 
 def execute(cmd):
     proc = subprocess.Popen(str(cmd), shell=True, stdout=subprocess.PIPE,)
@@ -21,4 +22,16 @@ def processes(target):
                 processes.append(entry)
     
     return processes
+
+def os_move(previous, post):
+    previous = str(previous).replace(" ", "")
+    post = str(previous).replace(" ", "")
+    if os.path.isdir(previous) or os.path.isfile(previous):
+        if os.path.isdir(post) or os.path.isfile(post):
+            if os.path.isdir(previous) and os.path.isfile(post):
+                return -1
+            cmd = "mv " + previous + " " + post
+            os.system(cmd)
+            return 0
+    return -1
 

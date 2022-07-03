@@ -29,11 +29,9 @@ def make_exe_script(urls, option):
             cmd = ytdlp_audio_cmd(url)
         elif option == "video":
             cmd = ytdlp_video_cmd(url)
-        cmd = cmd + " &"
-
+        cmd = cmd + " > /dev/null 2>&1 &"
         lines.append(cmd)
-        lines.append("echo $!")
-        lines.append('echo "' + str(url) + "'")
-        lines.append("")
 
     return lines
+
+
