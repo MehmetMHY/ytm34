@@ -3,8 +3,10 @@ import sys
 import os
 
 # create path and load local scripts/modules
-PATH = str(os.path.dirname(os.path.realpath(__file__)))
-PATH = PATH.split("/")
+SPATH = str(os.path.dirname(os.path.realpath(__file__)))
+
+# load local scripts/modules
+PATH = SPATH.split("/")
 PATH = PATH[0:-1]
 PATH.append("src")
 PATH = "/".join(PATH)
