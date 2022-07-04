@@ -45,3 +45,12 @@ def vim_open_file(file_path):
 def clear_console():
     os.system("clear")
 
+def create_dir(path, name):
+    path = str(path)
+    name = str(name)
+    if os.path.isdir(path):
+        dir_path = os.path.join(path, name)
+        os.mkdir(dir_path)
+        return 0
+    return -1
+
